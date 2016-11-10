@@ -2,18 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-// Singleton qui s'auto-initialise dès qu'un script en a besoin
-// Permet de ne pas avoir à gérer des GameObjects dans les Scenes
-// et d'oublier d'en mettre dans les scenes de test par exemple!
-//
-// J'ai emprunté l'idée sur mon projet freelance, j'ai trouvé ça plutot ingénieux! :)
-
-// Les Scripts étendu de cette classe auront le préfixe SMB_ pour qu'on sache facilement
-// qu'il s'agit d'un singleton
-
-// TODO Réfléchir à changer cette classe pour qu'elle aille chercher une Prefab pour le singleton
-// Ca permettra d'ajouter des properties manuellement dans la Prefab et changer facilement des
-// paramètres liés au singleton (TODO prévoir un dossier spécial avec toutes les Prefabs singleton)
 
 public abstract class SingletonMonoBehaviour<T> : MonoBehaviour where T : SingletonMonoBehaviour<T>
 {
